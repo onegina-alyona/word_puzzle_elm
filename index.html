@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <style>
+      .jumbotron {
+        background-color: #00ccff;
+        text-align: center;
+      }
+
+      .startBtn {
+        width: 200px;
+        height: 40px;
+      }
+
+      .inputStyle {
+        width: 200px;
+        height: 40px;
+        text-align: center;
+        font-size: 18px;
+      }
+    </style>
+  </head>
+
+  <body class="jumbotron">
+    <div id="setting">
+      <div style="margin-top: 200px;">
+          <label style="width: 200px; text-align: right; font-size: 20px;">Count of Words  </label>&nbsp;&nbsp;&nbsp;&nbsp;
+          <input class="inputStyle" placeholder="Enter" id="wordCount" value="3" />
+      </div>
+
+      <div style="margin-top: 20px;">
+          <label style="width: 200px; text-align: right; font-size: 20px;">Display Time  </label>&nbsp;&nbsp;&nbsp;&nbsp;
+          <input class="inputStyle" placeholder="Enter" id="displayTime" value="0.3" />
+      </div>
+
+      <div style="margin-top: 100px;">
+        <button class="startBtn" onclick="startGame();">Start</button>
+      </div>
+    </div>
+      
+    <label id="counter" style="font-size: 40px;"></label>
+    <div>
+      <label id="accuracy" style="font-size: 40px;"></label>
+    </div>
+    <div>
+      <table style="width: 100%;">
+        <tr style="width: 100%;">
+          <td style="width: 50%;">
+            <div id="problems">
+
+            </div>
+          </td>
+
+          <td id="substitutions" style="width: 50%;">
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <div id="elm-code-is-loaded-here" hidden></div>
+  </body>
+
+  <script src="dist/main.js"></script>
+  <script>
+      Elm.Main.embed(document.getElementById("elm-code-is-loaded-here"));
+  </script>
+</html>
